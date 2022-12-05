@@ -28,10 +28,10 @@ app.use('/api/v1', message);
 // deployment
 __dirname = path.resolve();
 if (process.env.NODE_ENV === 'production') {
-    app.use(express.static('frontend/build/index.html'));
+    app.use(express.static('build'));
         console.log('production');
     app.get('*', (req, res) => {
-        res.sendFile(path.resolve('frontend', 'build', 'index.html'))
+        res.sendFile(path.resolve(__dirname, 'build', 'index.html'))
         console.log('production2');
     });
 } else {
