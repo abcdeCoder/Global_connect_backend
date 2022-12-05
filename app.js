@@ -32,6 +32,7 @@ if (process.env.NODE_ENV === 'production') {
         console.log('production');
     app.get('*', (req, res) => {
         res.sendFile(path.resolve(__dirname, 'frontend', 'build', 'index.html'))
+        console.log('production2');
     });
 } else {
     app.get('/', (req, res) => {
