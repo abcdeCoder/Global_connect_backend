@@ -8,10 +8,9 @@
   "description": "Full Stack Instagram Social Media App",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false && npm install --prefix frontend && npm run build --prefix frontend"
+    "start": "node server.js"
   },
-  "author": "Jigar Sable",
+  "author": "Gaurav Verma",
   "license": "ISC",
   "dependencies": {
     "@sendgrid/mail": "^7.6.2",
