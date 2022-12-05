@@ -26,12 +26,12 @@ app.use('/api/v1', chat);
 app.use('/api/v1', message);
 
 // deployment
-__dirname = path.resolve();
+// __dirname = path.resolve();
 if (process.env.NODE_ENV === 'production') {
     app.use(express.static('frontend/build'));
         console.log('production');
     app.get('*', (req, res) => {
-        res.sendFile(path.resolve(__dirname, 'frontend', 'build', 'index.html'))
+        res.sendFile(path.resolve( 'frontend', 'build', 'index.html'))
         console.log('production2');
     });
 } else {
