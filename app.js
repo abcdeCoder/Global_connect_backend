@@ -30,10 +30,10 @@ app.use('/api/v1', message);
 if (process.env.NODE_ENV === 'production') {
     app.use(express.static('frontend/build'));
         console.log('production');
-    app.get('*', (req, res) => {
-        res.sendFile(path.resolve( 'frontend', 'build', 'index.html'))
-        console.log('production2');
-    });
+    // app.get('*', (req, res) => {
+    //     res.sendFile(path.resolve( 'frontend', 'build', 'index.html'))
+    //     console.log('production2');
+    // });
 } else {
     app.get('/', (req, res) => {
         res.send('Server is Running! 🚀');
